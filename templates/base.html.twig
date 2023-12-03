@@ -2,18 +2,43 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Enquête{% endblock %}</title>
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+        {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        
+        {% block javascripts %}{% endblock %}
+        {# <script src="{{ asset('js/script.js') }}"></script> #}
+
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="{{ path('app_accueil') }}" class="{% if app.request.attributes.get('_route') == 'app_accueil' %}active{% endif %}">l'Injonction</a></li>
+                    <li><a href="{{ path('app_enquete') }}" class="{% if app.request.attributes.get('_route') == 'app_enquete' %}active{% endif %}">Enquête</a></li>
+                    <li><a href="{{ path('app_resultats') }}" class="{% if app.request.attributes.get('_route') == 'app_resultats' %}active{% endif %}">Résultats</a></li>
+                    <li><a href="{{ path('app_web_service') }}" class="{% if app.request.attributes.get('_route') == 'app_web_service' %}active{% endif %}">Documentation API</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            {% block main %}{% endblock %}
+        </main>
+
+        <footer>
+            <div id="copyright">
+                <div>© 2023 - Maël Mouquet</div>
+                <div>Images de Freepik</div>
+            </div>
+        </footer>
     </body>
 </html>

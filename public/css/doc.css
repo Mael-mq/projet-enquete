@@ -1,0 +1,28 @@
+section:first-of-type {
+    background-color: #DBE6FF;
+    height: 150px;
+    text-align: center;
+}
+section:first-of-type > h1 {
+    padding: 20px 0;
+}
+section:first-of-type > p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+section:nth-of-type(2){
+    text-align: center;
+    padding: 20px 0;
+}
+section:nth-of-type(2) > div {
+    padding: 20px 0;
+}
+
+.code {
+    font-family: 'Source Code Pro', monospace;
+    width: fit-content;
+    margin: 0 auto;
+    border: 2px solid #4358A6;
+    padding: 10px;
+    border-radius: 10px;
+}

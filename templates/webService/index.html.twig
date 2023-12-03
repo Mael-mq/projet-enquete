@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/doc.css') }}">
+{% endblock stylesheets %}
+
+
+{% block main %}
+
+    <section>
+        <h1 class="font-26 regular">Comment utiliser l'API ?</h1>
+        <p class="font-16 regular">Une API est une interface de programmation, celle-ci vous permettra de récupérer des données sur les statistiques de l'enquête au format JSON.</p>
+    </section>
+    <section>
+        <div>
+            <h2 class="font-20 regular">Récupérer toutes les questions</h2>
+            <div class="code">http://localhost:8000/api/all</div>
+        </div>
+        <div>
+            <h2 class="font-20 regular">Récupérer une question en particulier avec son id</h2>
+            <div class="code">http://localhost:8000/api/?q=id</div>
+        </div>
+        <div>
+            <h2 class="font-20 regular">Exemple : Récupérer la question 4</h2>
+            <div class="code">http://localhost:8000/api/?q=4</div>
+        </div>
+        
+    </section>
+
+{% endblock %}

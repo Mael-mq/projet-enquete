@@ -1,0 +1,112 @@
+section:first-of-type {
+    background-image: url("../images/img-accueil.png");
+    background-size: cover;
+}
+
+section:first-of-type > div {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 100px;
+}
+
+section:first-of-type > div > * {
+    padding: 20px 0;
+}
+
+section:first-of-type > div > p {
+    margin: 0;
+}
+
+section:nth-of-type(2) {
+    background-color: #DBE6FF;
+}
+
+section:nth-of-type(2) > h2 {
+    margin: 0;
+    text-align: center;
+    padding-top: 20px;
+}
+
+section:nth-of-type(2) > div {
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section:nth-of-type(2) > div > p, section:nth-of-type(2) > div > a {
+    margin: 0 20px;
+}
+
+section:nth-of-type(2) > div > a > button {
+    background-color: #4358A6;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 45px;
+    color: #F9F9F9;
+    border: 1px solid #4358A6;
+    font-weight: 500;
+}
+
+section:nth-of-type(2) > div > a > button:hover {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+section:nth-of-type(2) > p {
+    width: 600px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+section:nth-of-type(3) {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section:nth-of-type(3) h3 {
+    margin: 20px 0 10px 0;
+}
+
+section:nth-of-type(3) #img-stats {
+    width: 220px;
+    height: 226px;
+    background-image: url("../images/img-graphe.png");
+    margin: 0 auto;
+}
+
+section:nth-of-type(3) #img-doc {
+    width: 177px;
+    height: 222px;
+    background-image: url("../images/img-document.png");
+    margin: 0 auto;
+}
+
+section:nth-of-type(3) a {
+    text-decoration: none;
+    color: #4358A6;
+}
+section:nth-of-type(3) a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px){
+    section:first-of-type {
+        background-image: none;
+    }
+    section:first-of-type > div {
+        padding-left: 0;
+        width: 80%;
+    }
+    section:nth-of-type(2) > div {
+        flex-direction: column;
+    }
+    section:nth-of-type(2) > p {
+        width: 80%;
+    }
+    section:nth-of-type(3) {
+        flex-direction: column;
+    }
+}

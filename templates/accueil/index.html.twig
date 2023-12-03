@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/accueil.css') }}">
+{% endblock stylesheets %}
+
+{% block main %}
+
+<section>  
+    <div>
+        <p class="font-28 regular">« Quoi ? T'as pas Insta ? »</p>
+        <p class="font-16 light">Les réseaux sociaux sont pour beaucoup <span style="font-weight: 500;">omniprésents</span> dans la vie quotidienne, mais</p>
+        <h1 class="font-28 medium">Faut-il être sur les réseaux sociaux pour s'intégrer à un groupe social ?</h1>
+    </div>
+</section>
+<section>
+    <h2 class="font-26 regular">Déjà subi l'injonction ? Témoin ? De manière inconsciente ?</h2>
+    <div>
+        <p class="regular font-26">Pour le savoir</p>
+        <a href="{{ path('app_enquete') }}"><button class="font-16">Participe à l'enquête (5min)</button></a>
+    </div>
+    <p>
+        Participer à cette enquête nous aide à récolter des informations sur le sujet. Cela permet d'avoir une source d'informations 
+        plus précise, et aide à mieux cerner le problème et mieux sensibiliser. Le questionnaire est 100% anonyme, répondre de 
+        manière objective aide l'enquête à gagner en précision.
+    </p>
+</section>
+<section>
+    <div>
+        <h3 class="regular font-26">Statistiques</h3>
+        <div id="img-stats"></div>
+        <a class="regular font-16" href="{{ path('app_resultats') }}">Voir les résultats</a>
+    </div>
+    <div>
+        <h3 class="regular font-26">API</h3>
+        <div id="img-doc"></div>
+        <a class="regular font-16" href="{{ path('app_web_service') }}">Voir la documentation</a>
+    </div>
+</section>
+
+{% endblock %}

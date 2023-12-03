@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/res.css') }}">
+{% endblock stylesheets %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('js/res.js') }}"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
+{% endblock %}
+
+{% block main %}
+<h1 class="font-28 regular">Résultats de l'enquête</h1>
+<section>
+    <div>
+        <canvas id="q4"></canvas>
+    </div>
+    <div>
+        <canvas id="q6"></canvas>
+    </div>
+    <div>
+        <canvas id="q8"></canvas>
+    </div>
+    <div>
+        <canvas id="q9"></canvas>
+    </div>
+    <div>
+        <canvas id="q10"></canvas>
+    </div>
+    <div>
+        <canvas id="q11"></canvas>
+    </div>
+    <div>
+        <canvas id="q12"></canvas>
+    </div>
+    <div>
+        <canvas id="q13"></canvas>
+    </div>
+</section>
+
+{% endblock %}

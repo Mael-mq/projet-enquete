@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+    padding-top: 20px;
+}
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+section > div {
+    width: 40%;
+}
+@media screen and (max-width: 1200px){
+    section{
+        flex-direction: column;
+        align-content: center;
+    }
+}
